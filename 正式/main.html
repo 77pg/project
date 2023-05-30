@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://img.onl/WnRMG" rel="icon" type="jpg">
+    <title>FULL LOVE愛寵</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 會員專區的字樣 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <script src="../JS/navbar.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 寵物列表
+            var petList = [
+                {
+                    name: "強森",
+                    type: "貓",
+                    age: "6 歲",
+                    description: "這是一隻可愛的貓咪。"
+                },
+                {
+                    name: "阿財",
+                    type: "狗",
+                    age: "13 歲",
+                    description: "這是一隻忠心的狗狗。"
+                },
+                {
+                    name: "小美",
+                    type: "兔子",
+                    age: "10 歲",
+                    description: "這是一隻活潑可愛的兔子。"
+                },
+                // 可以繼續添加更多的寵物
+                {
+                    name: "小飛機",
+                    type: "鳥",
+                    age: "8 歲",
+                    description: "這是一隻美麗的鳥兒。"
+                },
+                {
+                    name: "妙蛙種子",
+                    type: "青蛙",
+                    age: "2歲",
+                    description: "這是一隻神秘的青蛙。"
+                }
+            ];
+
+            // 生成寵物列表HTML
+            function generatePetList() {
+                var petListContainer = $("#petList");
+                petListContainer.empty();
+                for (var i = 0; i < petList.length; i++) {
+                    var pet = petList[i];
+                    var petItem = $("<li></li>");
+                    petItem.append("<h3>" + pet.name + "</h3>");
+                    petItem.append("<p>種類: " + pet.type + "</p>");
+                    petItem.append("<p>年齡: " + pet.age + "</p>");
+                    petItem.append("<p>描述: " + pet.description + "</p>"+"<hr>");
+                    petListContainer.append(petItem);
+                }
+            }
+
+            // 初始化寵物列表
+            generatePetList();
+
+            // 搜尋功能
+            $("#SearchButton").click(function () {
+                var searchInput = $("#Searchin").val();
+                if (searchInput.trim() !== "") {
+                    // 將搜尋關鍵字顯示在搜尋紀錄中
+                    $("#searchHistory").prepend("<p>" + searchInput + "</p>");
+
+                    // 搜尋寵物
+                    var searchResult = petList.filter(function (pet) {
+                        return (
+                            pet.name.toLowerCase().includes(searchInput.toLowerCase()) ||
+                            pet.type.toLowerCase().includes(searchInput.toLowerCase())
+                        );
+                    });
+
+                    // 顯示搜尋結果
+                    if (searchResult.length > 0) {
+                        var searchResultText = "搜尋結果：\n\n";
+                        for (var i = 0; i < searchResult.length; i++) {
+                            var pet = searchResult[i];
+                            searchResultText += "名稱: " + pet.name + "\n";
+                            searchResultText += "種類: " + pet.type + "\n";
+                            searchResultText += "年齡: " + pet.age + "\n";
+                            searchResultText += "描述: " + pet.description + "\n";
+                            searchResultText += "\n";
+                        }
+                        alert(searchResultText);
+                    } else {
+                        alert("搜尋不到結果");
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="content-container">
+        <nav class="navbar fixed-top shadow">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+                    <a href="./main.html" style="display: flex; align-items: center;text-decoration: none;">
+                        <img src="https://img.onl/C7JQSq">
+                        <span style="color: white; font-weight: bold;">FULL LOVE愛寵</span>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end"
+                    style="background: linear-gradient(to top, rgb(231, 223, 223), rgb(207, 242, 253));" tabindex="-1"
+                    id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" style="font-weight: bold;" id="offcanvasNavbarLabel">FL愛寵</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./main.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-black" href="./introduction.html">關於我們</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-black" href="./service.html">寵物服務內容</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    寵物分享平台
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./share_plateform.html">日常互動分享</a></li>
+                                    <li><a class="dropdown-item" href="./picture.html">照片牆</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    會員專區
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./nomal_set.html">基本資料</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#integrationField">載具整合</a>
+                                        <div class="d-flex mt-2" style="display: none;">
+                                            <input class="form-control p-2 m-2" type="text" id="integrationField"
+                                                placeholder="載具格式：/xxx+xxx"
+                                                style="text-transform: uppercase;display: none;">
+                                            <button class="btn btn-primary m-2" id="saveButton"
+                                                style="display: none;width: 23%;font-size: small;">儲存
+                                            </button>
+                                        </div>
+                                        <div class="dropdown-item" id="confirmationDiv" style="display: none;">
+                                            已成功儲存您的載具！
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search" id="searchForm">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                                id="sI">
+                            <button class="btn btn-outline-success" type="submit" id="sB">Search</button>
+                            <a href="./Register.html" class="btn btn-outline-primary" id="registerButton">註冊會員</a>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div style="position: relative; top: 100px;" id="p1">
+            <!-- 輪播圖 -->
+            <div class="container p-5">
+                <div class="carousel carousel-dark slide" id="i1" data-bs-ride="carousel" data-bs-interval="2000">
+
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#i1" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#i1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#i1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#i1" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://burst.shopifycdn.com/photos/a-blue-and-green-parakeet-on-white.jpg?width=925&format=pjpg&exif=1&iptc=1"
+                                alt="Photo by: Farah" class="img-fluid"
+                                style="height: 500px;width: 100%;object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://burst.shopifycdn.com/photos/a-cat-looks-through-the-back-of-a-chair.jpg?width=925&format=pjpg&exif=1&iptc=1"
+                                alt="Photo by: Sarah Pflug" class="img-fluid"
+                                style="height: 500px;width: 100%;object-fit: cover;">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://img.onl/XpgFET" alt="Photo by: Samantha Hurley，Photo by: Sarah Pflug"
+                                class="img-fluid" style="height: 500px;width: 100%;object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://burst.shopifycdn.com/photos/french-bulldog-on-grass.jpg?width=925&format=pjpg&exif=1&iptc=1"
+                                alt="Photo by: Shopify Photos" class="img-fluid"
+                                style="height: 500px;width: 100%;object-fit: cover;">
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#i1" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#i1" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div style="position: relative; top: 70px; padding-bottom: 100px;background-color: bisque;" class="shadow rounded">
+                    <div class="container">
+                        <h1 class="text-center p-5">寵物列表</h1><hr>
+                        <ul id="petList" class="m-5 bg-body shadow rounded" style="list-style-type: none;padding: 100px;"></ul>
+                    </div><hr>
+                    <div class="container">
+                        <h1 class="text-center">寵物表單</h1>
+                        <div id="petForm">
+                        </div>
+                    </div>
+
+                    <div class="form-group p-3 mt-5">
+                        <label for="Searchin">搜尋寵物名稱或種類</label>
+                        <div class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Searchin"
+                                id="Searchin">
+                            <button class="btn btn-primary" type="button" id="SearchButton">搜尋</button>
+                        </div>
+                        <div id="searchHistory"></div>
+                    </div>
+                </div>
+            </div>
+            <ul class="pagination justify-content-center" style="margin:30px 0 50px 0">
+                <li class="page-item"><a class="page-link" href="#p1">Top</a></li>
+                <li class="page-item active"><a class="page-link" href="./main.html">1</a></li>
+                <li class="page-item"><a class="page-link" href="./introduction.html">2</a></li>
+                <li class="page-item"><a class="page-link" href="./service.html">3</a></li>
+                <li class="page-item"><a class="page-link" href="./share_plateform.html">4</a></li>
+                <li class="page-item"><a class="page-link" href="./nomal_set.html">The Last</a></li>
+            </ul>
+
+            <div class="footer container-fluid p-5"
+                style="background: linear-gradient(to right, rgba(240, 128, 128, 0.486), rgba(173, 216, 230, 0.479));"
+                id="p1">
+                <h1>FULL LOVE愛寵</h1>
+                <p>愛寵是一個致力於提供優質寵物服務的網站。我們熱愛動物，並致力於保護和照顧它們的福祉，
+                    無論您是寵物愛好者、養寵物的人，還是正在尋找寵物收養的人，我們都為您提供了各種有用的資源和服務，
+                    如果您有任何問題或需要進一步了解我們的服務，請填寫會員專區的表單，給我們建議
+                    ，或者聯絡我們 (<a href="tel:+886-123-456-789" id="tel"
+                        aria-label="0123-456-789">0123-456-789</a>)，我們將盡快與您聯繫。
+                </p>
+                <h6>@ 2023 &nbsp;小專題製作 &nbsp;網頁設計&nbsp;|&nbsp;作者：王玥晴 &nbsp;|&nbsp;
+                    導師：王偉璁&nbsp;
+                </h6>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+
+</body>
+
+</html>

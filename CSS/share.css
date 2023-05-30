@@ -1,0 +1,124 @@
+/* body {
+    font-family: 'Roboto', Arial, sans-serif;
+} */
+
+.required-field input:invalid {
+    border: 1px solid red;
+}
+
+.required-field::before {
+    content: "*";
+    color: red;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+#petForm,
+#petList {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 50px;
+    margin-bottom: 20px;
+}
+
+#petForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#submitButton,
+#confirmButton,
+#cancelButton {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#description {
+    margin-bottom: 20px;
+}
+
+#submitButton,
+#confirmButton,
+#cancelButton {
+    display: block;
+    margin: 0 auto;
+
+}
+
+#customSpecies {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#petList {
+    font-size: 20px;
+    padding: 0;
+    display: block;
+}
+
+#petList li {
+    margin-bottom: 20px;
+    list-style-type: none;
+    border-top: 1px solid #ccc;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    /* 使用空間平均分配來將項目靠兩側對齊 */
+    justify-content: space-between;
+}
+
+#formHeader {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+#confirmButton,
+#cancelButton {
+    display: none;
+}
+
+.editButton,
+.deleteButton,
+#submitButton,
+#confirmButton,
+#cancelButton {
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+
+}
+
+.editButton,
+#confirmButton {
+    background-color: #2ecc71;
+}
+
+.deleteButton,
+#cancelButton {
+    background-color: #e74c3c;
+}
+
+.editButton:hover,
+#confirmButton:hover {
+    background-color: #109e4b;
+}
+
+.deleteButton:hover,
+#cancelButton:hover {
+    background-color: #c01300;
+}

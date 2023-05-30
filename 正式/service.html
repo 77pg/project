@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://img.onl/WnRMG" rel="icon" type="jpg">
+    <title>FL愛寵-服務內容</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 會員專區的字樣 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <script src="../JS/navbar.js"></script>
+</head>
+
+<body>
+    <div class="content-container">
+        <nav class="navbar fixed-top shadow">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+                    <a href="./main.html" style="display: flex; align-items: center;text-decoration: none;">
+                        <img src="https://img.onl/C7JQSq">
+                        <span style="color: white; font-weight: bold;">FULL LOVE愛寵</span>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end"
+                    style="background: linear-gradient(to top, rgb(231, 223, 223), rgb(207, 242, 253));" tabindex="-1"
+                    id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" style="font-weight: bold;" id="offcanvasNavbarLabel">FL愛寵</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./main.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-black" href="./introduction.html">關於我們</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-black" href="./service.html">寵物服務內容</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    寵物分享平台
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./share_plateform.html">日常互動分享</a></li>
+                                    <li><a class="dropdown-item" href="./picture.html">照片牆</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    會員專區
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./nomal_set.html">基本資料</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#integrationField">載具整合</a>
+                                        <div class="d-flex mt-2" style="display: none;">
+                                            <input class="form-control p-2 m-2" type="text" id="integrationField"
+                                                placeholder="載具格式：/xxx+xxx"
+                                                style="text-transform: uppercase;display: none;">
+                                            <button class="btn btn-primary m-2" id="saveButton"
+                                                style="display: none;width: 23%;font-size: small;">儲存
+                                            </button>
+                                        </div>
+                                        <div class="dropdown-item" id="confirmationDiv" style="display: none;">
+                                            已成功儲存您的載具！
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search" id="searchForm">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                                id="searchInput">
+                                <button class="btn btn-outline-success" type="submit" id="searchButton">Search</button>
+                                <a href="./Register.html" class="btn btn-outline-primary" id="registerButton">註冊會員</a>
+                            </form>
+                            <div id="searchHistory"></div>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div style="position: relative; top: 95px;" id="p1">
+
+            <!-- <div class="container-fluid p-5 text-center" style="background-color: #c2d6e2e0;" id="p1">
+                <h1>服務內容</h1>
+            </div> -->
+            <ul class="breadcrumb p-3">
+                <li class="breadcrumb-item active"><a href="./main.html">HOME</a></li>
+                <li class="breadcrumb-item"><a href="./introduction.html">Introduction</a></li>
+                <li class="breadcrumb-item" style="font-weight: bold;">Services</li>
+
+            </ul>
+            <!-- 價目表 -->
+            <div class="container p-5 mt-3 bg-white priceList" id="p2">
+                <h2>服務內容價目表</h2>
+                <p>Price of My Pet Care Services</p>
+                <table class="table table-hover" id="pricetable">
+                    <thead>
+                        <tr>
+                            <th>服務項目Items</th>
+                            <th>時長Long</th>
+                            <th>價格Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>寵物寄宿Pet Boarding</td>
+                            <td>日托 / 過夜</td>
+                            <td>每天900新台幣 /
+                                每晚1200新台幣</td>
+                        </tr>
+                        <tr>
+                            <td>遛狗服務Dog Walking</td>
+                            <td>30分鐘 / 1小時</td>
+                            <td>600新台幣 / 1100新台幣</td>
+                        </tr>
+                        <tr>
+                            <td>寵物美容Pet Grooming</td>
+                            <td>洗澡和梳毛 / 全套美容（包括洗澡、修剪、修指甲）</td>
+                            <td>750新台幣 / 1500新台幣</td>
+                        </tr>
+                        <tr>
+                            <td>寵物寄養Pet Sitting</td>
+                            <td>1-4小時 / 5小時以上</td>
+                            <td>每小時750台幣 / 每小時1200台幣</td>
+                        </tr>
+                        <tr>
+                            <td>寵物訓練Pet Training</td>
+                            <td>基本服從訓練（4個課程） / 進階訓練（6個課程）</td>
+                            <td>3000新台幣 / 6000新台幣</td>
+                        </tr>
+                        <tr>
+                            <td>寵物運輸Pet Transportation</td>
+                            <td>本地寵物出租車服務 / 機場運輸</td>
+                            <td>（單程，城市範圍內）750新台幣 / （單程）1500新台幣</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <ul class="pagination justify-content-center" style="margin:30px 0 50px 0">
+                <li class="page-item"><a class="page-link" href="#p1">Top</a></li>
+                <li class="page-item"><a class="page-link" href="./main.html">1</a></li>
+                <li class="page-item"><a class="page-link" href="./introduction.html">2</a></li>
+                <li class="page-item active"><a class="page-link" href="./service.html">3</a></li>
+                <li class="page-item"><a class="page-link" href="./share_plateform.html">4</a></li>
+                <li class="page-item"><a class="page-link" href="./nomal_set.html">The Last</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer container-fluid p-5"
+        style="background: linear-gradient(to right, rgba(240, 128, 128, 0.486), rgba(173, 216, 230, 0.479));" id="p1">
+        <h1>FULL LOVE愛寵</h1>
+        <p>愛寵是一個致力於提供優質寵物服務的網站。我們熱愛動物，並致力於保護和照顧它們的福祉，
+            無論您是寵物愛好者、養寵物的人，還是正在尋找寵物收養的人，我們都為您提供了各種有用的資源和服務，
+            如果您有任何問題或需要進一步了解我們的服務，請填寫會員專區的表單，給我們建議
+            ，或者聯絡我們 (<a href="tel:+886-123-456-789" id="tel" aria-label="0123-456-789">0123-456-789</a>)，我們將盡快與您聯繫。
+        </p>
+        <h6>@ 2023 &nbsp;小專題製作 &nbsp;網頁設計&nbsp;|&nbsp;作者：王玥晴 &nbsp;|&nbsp;
+            導師：王偉璁&nbsp;
+        </h6>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://img.onl/WnRMG" rel="icon" type="jpg">
+    <title>FULL LOVE愛寵</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <style>
+        h1{
+            text-align: center;
+        }
+        /* 圖片內容高度 */
+        .card-img-custom {
+            height: 400px;
+            object-fit: cover;
+        }
+        /* 文字內容高度 */
+        .card-body {
+            height: 150px;
+            /* 設定固定高度 */
+            overflow-y: auto;
+            /* 僅顯示垂直滾動條 */
+        }
+
+        /* 隱藏滾動條上下箭頭和軌道背景 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            /* 設置滾動條寬度 */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #b3cfda;
+            /* 滾動條滑塊顏色 */
+            border-radius: 4px;
+            /* 滾動條滑塊圓角 */
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #f0cbcb;
+            /* 滾動條滑塊在懸停時的顏色 */
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: transparent;
+            /* 設置軌道背景為透明 */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="content-container">
+        <nav class="navbar fixed-top shadow">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+                    <a href="./main.html" style="display: flex; align-items: center;text-decoration: none;">
+                        <img src="https://img.onl/C7JQSq">
+                        <span style="color: white; font-weight: bold;">FULL LOVE愛寵</span>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end"
+                    style="background: linear-gradient(to top, rgb(231, 223, 223), rgb(207, 242, 253));" tabindex="-1"
+                    id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" style="color: rgb(41, 41, 41); font-weight: bold;"
+                            id="offcanvasNavbarLabel">FL愛寵</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body text-black">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./main.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./introduction.html">關於我們</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./service.html">服務內容</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./share_plateform.html">寵物分享平台</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    會員專區
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./nomal_set.html">基本資料</a></li>
+                                    <li><a class="dropdown-item" href="./normal_Carrier Barcode.html">載具整合</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="./nomal_password.html">密碼更改</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search" id="searchForm">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                                id="searchInput">
+                            <button class="btn btn-outline-success" type="submit" id="searchButton">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div style="position: relative; top: 100px;" id="p1">
+            <section id="gallery">
+                <h1>寵物分享照片</h1>
+                <div class="container m-5 bg-dark rounded">
+
+                    <div class="row p-5">
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <div class="card card-custom">
+                                <img src="https://img.onl/CNCUQr" class="card-img-top card-img-custom img-fluid"
+                                    alt="Pet 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">蛇</h5>
+                                    <p class="card-text">Photo credit: Eileen Fonferko on Visualhunt fdafgrageradf
+                                        adsfsfwfaewwfwf</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <div class="card card-custom">
+                                <img src="https://img.onl/Y9r6Ln" class="card-img-top card-img-custom img-fluid"
+                                    alt="Pet 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">沙蚺(六個月大)</h5>
+                                    <p class="card-text">
+                                        原產在非洲地區，他常躲在沙子裡伏擊獵物。dafgrarehreahehre
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <div class="card card-custom">
+                                <img src="https://img.onl/F85WVB" class="card-img-top card-img-custom img-fluid"
+                                    alt="Pet 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">細皮瘤尾守宮(三個月大)</h5>
+                                    <p class="card-text">
+                                        擁有獨特的皮膚斑點和尾巴。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <div class="card card-custom">
+                                <img src="https://images.pexels.com/photos/162140/duckling-birds-yellow-fluffy-162140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    class="card-img-top card-img-custom img-fluid"
+                                    alt="photoFrom: https://www.pexels.com/zh-tw/photo/162140/">
+                                <div class="card-body">
+                                    <h5 class="card-title">柯爾鴨</h5>
+                                    <p class="card-text">
+                                        他很親人，喜歡游泳並具有美麗的羽毛。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <div class="card card-custom">
+                                <img src="https://images.pexels.com/photos/162140/duckling-birds-yellow-fluffy-162140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    class="card-img-top card-img-custom img-fluid"
+                                    alt="photoFrom: https://www.pexels.com/zh-tw/photo/162140/">
+                                <div class="card-body">
+                                    <h5 class="card-title">柯爾鴨</h5>
+                                    <p class="card-text">
+                                        他很親人，喜歡游泳並具有美麗的羽毛。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <div class="card card-custom">
+                                <img src="https://images.pexels.com/photos/162140/duckling-birds-yellow-fluffy-162140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    class="card-img-top card-img-custom img-fluid"
+                                    alt="photoFrom: https://www.pexels.com/zh-tw/photo/162140/">
+                                <div class="card-body">
+                                    <h5 class="card-title">柯爾鴨</h5>
+                                    <p class="card-text">
+                                        他很親人，喜歡游泳並具有美麗的羽毛。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <div class="card card-custom">
+                                <img src="https://images.pexels.com/photos/162140/duckling-birds-yellow-fluffy-162140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    class="card-img-top card-img-custom img-fluid"
+                                    alt="photoFrom: https://www.pexels.com/zh-tw/photo/162140/">
+                                <div class="card-body">
+                                    <h5 class="card-title">柯爾鴨</h5>
+                                    <p class="card-text">
+                                        他很親人，喜歡游泳並具有美麗的羽毛。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </section>
+
+            <ul class="pagination justify-content-center" style="margin:30px 0 50px 0">
+                <li class="page-item"><a class="page-link" href="#p1">Top</a></li>
+                <li class="page-item active"><a class="page-link" href="./main.html">1</a></li>
+                <li class="page-item"><a class="page-link" href="./introduction.html">2</a></li>
+                <li class="page-item"><a class="page-link" href="./service.html">3</a></li>
+                <li class="page-item"><a class="page-link" href="./share_plateform.html">4</a></li>
+                <li class="page-item"><a class="page-link" href="./nomal_set.html">The Last</a></li>
+            </ul>
+
+
+            <!--  style="margin:20px 0" -->
+            <div class="footer container-fluid p-5"
+                style="background: linear-gradient(to right, rgba(240, 128, 128, 0.486), rgba(173, 216, 230, 0.479));"
+                id="p1">
+                <h1>FULL LOVE愛寵</h1>
+                <p>愛寵是一個致力於提供優質寵物服務的網站。我們熱愛動物，並致力於保護和照顧它們的福祉，
+                    無論您是寵物愛好者、養寵物的人，還是正在尋找寵物收養的人，我們都為您提供了各種有用的資源和服務，
+                    如果您有任何問題或需要進一步了解我們的服務，請填寫會員專區的表單，給我們建議
+                    ，或者聯絡我們 (<a href="tel:+886-123-456-789" id="tel"
+                        aria-label="0123-456-789">0123-456-789</a>)，我們將盡快與您聯繫。
+                </p>
+                <h6>@ 2023 &nbsp;小專題製作 &nbsp;網頁設計&nbsp;|&nbsp;作者：王玥晴 &nbsp;|&nbsp;
+                    導師：王偉璁&nbsp;
+                </h6>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

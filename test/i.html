@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>範例頁面</title>
+</head>
+<body>
+  <div class="mt-3">切換文字</div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var toggleText = document.getElementsByClassName("mt-3")[0];
+      if (toggleText) {
+        toggleText.innerHTML = "Less";
+      }
+    });
+  </script>
+</body>
+</html>

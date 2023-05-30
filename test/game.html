@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Phaser Game Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser/dist/phaser.min.js"></script>
+<body>
+    <script>
+        // 建立遊戲配置
+        var config = {
+            type: Phaser.AUTO,
+            width: 800,
+            height: 600,
+            scene: {
+                preload: preload,
+                create: create,
+                update: update
+            }
+        };
+
+        // 建立遊戲實例
+        var game = new Phaser.Game(config);
+
+        // 預載遊戲資源
+        function preload() {
+            this.load.image('player', 'assets/player.png');
+        }
+
+        // 建立遊戲場景
+        function create() {
+            this.player = this.add.image(400, 300, 'player');
+        }
+
+        // 更新遊戲邏輯
+        function update() {
+            this.player.rotation += 0.01;
+        }
+    </script>
+</body>
+
+</html>

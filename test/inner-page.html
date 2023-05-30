@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 30%;
+            background-color: #f8f9fa;
+            /* min-height: 100vh; */
+            float: right;
+        }
+
+        .toggle-button {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-color: #0000008a;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        .toggle-button:hover {
+            background-color: #555;
+            cursor: pointer;
+        }
+
+        /* 增加收合 Sidebar 後的樣式 */
+        .sidebar.collapsed {
+            width: 0;
+        }
+
+        .sidebar.collapsed .sidebar-content {
+            display: none;
+        }
+
+        .sidebar-content {
+            padding: 20px;
+        }
+
+        .navbar-nav {
+            margin-bottom: 10px;
+        }
+
+        .navbar-nav .nav-item {
+            margin-bottom: 10px;
+        }
+
+        .container-fluid {
+            padding-top: 20px;
+        }
+
+        /* .content {
+            border: 1em solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                url(https://img.freepik.com/free-vector/blue-abstract-comic-cartoon-sunlight-background_68708-237.jpg?size=626&ext=jpg) border-box 0 / cover;
+
+            width: 40rem;
+            padding: 1.5rem;
+            overflow: hidden;
+            resize: both;
+        } */
+        .container-fluid {
+            padding-top: 100px;
+            width: 100%;
+            height: 600px;
+            background-image:
+                linear-gradient(to bottom, rgba(3, 81, 184, 0.6),
+                    rgba(239, 220, 255, 0.6)),
+                url("https://images.pexels.com/photos/2473183/pexels-photo-2473183.jpeg?auto=compress&cs=tinysrgb&w=1600");
+        }
+
+
+        main {
+            width: 50%;
+            margin: 0 auto;
+            font-size: 50px;
+            color: grey;
+            padding-left: 20px;
+            border-left: 10px solid #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="toggle-button" id="toggleButton1">展開</button>
+
+    <nav class="navbar navbar-expand-lg navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-9">
+                <main class="content">
+                    <h1>Welcome to My Web Page</h1>
+                    <p>This is the main content of the page.</p>
+                </main>
+            </div>
+            <div class="col-3">
+                <aside class="sidebar collapsed" id="sidebar1">
+                    <div class="sidebar-content">
+                        <h2>Sidebar</h2>
+                        <p>This is the sidebar content.</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入 Bootstrap 的 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const toggleButton1 = document.getElementById('toggleButton1');
+        const sidebar1 = document.getElementById('sidebar1');
+
+        toggleButton1.addEventListener('click', () => {
+            sidebar1.classList.toggle('collapsed');
+        });
+    </script>
+</body>
+
+</html>

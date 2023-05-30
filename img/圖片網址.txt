@@ -1,0 +1,17 @@
+icon catttt(1).jpg https://img.onl/WnRMG
+標題 catttt.jpg https://img.onl/C7JQSq
+沙蚺 https://img.onl/Y9r6Ln
+gecko https://img.onl/F85WVB
+蛇原本 https://live.staticflickr.com/65535/48232964321_97964e8d8f_z.jpg
+蛇原本 https://img.onl/bap07H
+使用adobe放大，使照片集圖片相對高度，https://www.adobe.com/tw/express/feature/image/resize
+蛇 https://img.onl/CNCUQr
+
+https://img.onl/
+                            <!-- <img src="https://burst.shopifycdn.com/photos/relaxing-brown-and-white-tabby.jpg?width=925&format=pjpg&exif=1&iptc=1"
+                                alt="Photo by: Samantha Hurley，Photo by: Sarah Pflug" class="img-fluid"
+                                style="height: 500px;width: 50%;object-fit: cover;">
+                            <img src="https://burst.shopifycdn.com/photos/cat-enjoying-the-view.jpg?width=925&format=pjpg&exif=1&iptc=1"
+                                alt="Photo by: Samantha Hurley" class="img-fluid"
+                                style="height: 500px;width: 50%;object-fit: cover;"> -->
+用grid做響應式布局

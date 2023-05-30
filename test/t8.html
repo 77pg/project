@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://img.onl/WnRMG" rel="icon" type="jpg">
+    <title>FULL LOVE愛寵</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../CSS/main.css">
+
+</head>
+
+<body>
+    <div class="content-container">
+        <nav class="navbar fixed-top shadow">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+                    <a href="./main.html" style="display: flex; align-items: center;text-decoration: none;">
+                        <img src="https://img.onl/C7JQSq">
+                        <span style="color: white; font-weight: bold;">FULL LOVE愛寵</span>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end"
+                    style="background: linear-gradient(to top, rgb(231, 223, 223), rgb(207, 242, 253));" tabindex="-1"
+                    id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" style="color: rgb(41, 41, 41); font-weight: bold;"
+                            id="offcanvasNavbarLabel">FL愛寵</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body text-black">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./main.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./introduction.html">關於我們</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./service.html">寵物服務內容</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    寵物分享平台
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./share_plateform.html">日常互動分享</a></li>
+                                    <li><a class="dropdown-item" href="./picture.html">照片牆</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    會員專區
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./nomal_set.html">基本資料</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#integrationField">載具整合</a>
+                                        <div class="d-flex" style="display: none;">
+                                            <input class="form-control mt-3" type="text" id="integrationField"
+                                                placeholder="請填寫載具，例如：/xxx+xxx" style="text-transform: uppercase;">
+                                            <button class="btn btn-primary mt-3" id="saveButton">儲存
+                                            </button>
+                                        </div>
+                                        <div class="dropdown-item" id="confirmationDiv" style="display: none;">
+                                            已儲存您的載具
+                                        </div>
+                                    </li>
+                                </ul>
+                            <li><a class="dropdown-item" href="./nomal_password.html">密碼更改</a></li>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search" id="searchForm">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                                id="searchInput">
+                            <button class="btn btn-outline-success" type="submit" id="searchButton">Search</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div style="position: relative; top: 100px;" id="p1">
+            <!-- 輪播圖 -->
+            <div class="container p-5">
+                <div class="carousel carousel-dark slide" id="i1" data-bs-ride="carousel" data-bs-interval="2000">
+
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#i1" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#i1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#i1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#i1" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://burst.shopifycdn.com/photos/a-blue-and-green-parakeet-on-white.jpg?width=925&format=pjpg&exif=1&iptc=1"
+                                alt="Photo by: Farah" class="img-fluid"
+                                style="height: 500px;width: 100%;object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://burst.shopifycdn.com/photos/a-cat-looks-through-the-back-of-a-chair.jpg?width=925&format=pjpg&exif=1&iptc=1"
+                                alt="Photo by: Sarah Pflug" class="img-fluid"
+                                style="height: 500px;width: 100%;object-fit: cover;">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="https://img.onl/XpgFET" alt="Photo by: Samantha Hurley，Photo by: Sarah Pflug"
+                                class="img-fluid" style="height: 500px;width: 100%;object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://burst.shopifycdn.com/photos/french-bulldog-on-grass.jpg?width=925&format=pjpg&exif=1&iptc=1"
+                                alt="Photo by: Shopify Photos" class="img-fluid"
+                                style="height: 500px;width: 100%;object-fit: cover;">
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#i1" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#i1" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <ul class="pagination justify-content-center" style="margin:30px 0 50px 0">
+                <li class="page-item"><a class="page-link" href="#p1">Top</a></li>
+                <li class="page-item active"><a class="page-link" href="./main.html">1</a></li>
+                <li class="page-item"><a class="page-link" href="./introduction.html">2</a></li>
+                <li class="page-item"><a class="page-link" href="./service.html">3</a></li>
+                <li class="page-item"><a class="page-link" href="./share_plateform.html">4</a></li>
+                <li class="page-item"><a class="page-link" href="./nomal_set.html">The Last</a></li>
+            </ul>
+
+            <div class="footer container-fluid p-5"
+                style="background: linear-gradient(to right, rgba(240, 128, 128, 0.486), rgba(173, 216, 230, 0.479));"
+                id="p1">
+                <h1>FULL LOVE愛寵</h1>
+                <p>愛寵是一個致力於提供優質寵物服務的網站。我們熱愛動物，並致力於保護和照顧它們的福祉，
+                    無論您是寵物愛好者、養寵物的人，還是正在尋找寵物收養的人，我們都為您提供了各種有用的資源和服務，
+                    如果您有任何問題或需要進一步了解我們的服務，請填寫會員專區的表單，給我們建議
+                    ，或者聯絡我們 (<a href="tel:+886-123-456-789" id="tel"
+                        aria-label="0123-456-789">0123-456-789</a>)，我們將盡快與您聯繫。
+                </p>
+                <h6>@ 2023 &nbsp;小專題製作 &nbsp;網頁設計&nbsp;|&nbsp;作者：王玥晴 &nbsp;|&nbsp;
+                    導師：王偉璁&nbsp;
+                </h6>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // 獲取必要的元素
+            var integrationDropdown = document.querySelector(".dropdown-item[href='#integrationField']");
+            var integrationInput = document.getElementById("integrationField");
+            var saveButton = document.getElementById("saveButton");
+            var confirmationDiv = document.getElementById("confirmationDiv");
+
+            // 處理載具整合的點擊事件
+            integrationDropdown.addEventListener("click", function (event) {
+                event.preventDefault(); // 阻止預設的錨點跳轉行為
+                event.stopPropagation();
+
+                // 切換展開/收起狀態
+                if (integrationInput.classList.contains("show")) {
+                    integrationInput.classList.remove("show");
+                    saveButton.style.display = "none";
+                } else {
+                    integrationInput.classList.add("show");
+                    saveButton.style.display = "block";
+                }
+            });
+
+            // 處理儲存按鈕的點擊事件
+            saveButton.addEventListener("click", function (event) {
+                event.stopPropagation();
+                var inputText = integrationInput.value.trim();
+                if (inputText === "") {
+                    alert("請填寫載具");
+                    return;
+                }
+                if (!validateInputFormat(inputText)) {
+                    alert("載具格式無效");
+                    return;
+                }
+
+                // 顯示確認div
+                confirmationDiv.style.display = "block";
+            });
+
+            // 載具格式驗證函數
+            function validateInputFormat(input) {
+                var regex = /^\/[A-Za-z0-9!@#$%^&*()-_]{7}$/;
+                return regex.test(input);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

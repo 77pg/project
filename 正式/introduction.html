@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://img.onl/WnRMG" rel="icon" type="jpg">
+    <title>關於FL愛寵</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 會員專區的字樣 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <script src="../JS/navbar.js"></script>
+
+    <!-- ul li -->
+    <style>
+        h3 {
+            text-align: center;
+            padding: 5px 5px 5px 40px;
+            margin-bottom: 10px;
+        }
+
+        .second123 {
+            border: 2px dotted #b37979;
+            padding: 20px;
+        }
+
+        .second123 li {
+            font-size: 20px;
+            text-align: center;
+            list-style-type: none;
+            /* 改變背景色 */
+            background-color: #ffeeee;
+            /* 添加5px的圓角 */
+            border-radius: 5px;
+            /* 添加內邊距 */
+            padding: 5px;
+            /* 添加下方外邊距 */
+            margin-bottom: 10px;
+            /* 改變字體顏色 */
+            color: #333;
+            /* 改變字體粗細 */
+            font-weight: bold;
+        }
+
+        .second123 span {
+            font-size: 16px;
+        }
+
+        .hidden {
+
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-container">
+        <nav class="navbar fixed-top shadow">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+                    <a href="./main.html" style="display: flex; align-items: center;text-decoration: none;">
+                        <img src="https://img.onl/C7JQSq">
+                        <span style="color: white; font-weight: bold;">FULL LOVE愛寵</span>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end"
+                    style="background: linear-gradient(to top, rgb(231, 223, 223), rgb(207, 242, 253));" tabindex="-1"
+                    id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" style="font-weight: bold;" id="offcanvasNavbarLabel">FL愛寵</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./main.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-black" href="./introduction.html">關於我們</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-black" href="./service.html">寵物服務內容</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    寵物分享平台
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./share_plateform.html">日常互動分享</a></li>
+                                    <li><a class="dropdown-item" href="./picture.html">照片牆</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    會員專區
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./nomal_set.html">基本資料</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#integrationField">載具整合</a>
+                                        <div class="d-flex mt-2" style="display: none;">
+                                            <input class="form-control p-2 m-2" type="text" id="integrationField"
+                                                placeholder="載具格式：/xxx+xxx"
+                                                style="text-transform: uppercase;display: none;">
+                                            <button class="btn btn-primary m-2" id="saveButton"
+                                                style="display: none;width: 23%;font-size: small;">儲存
+                                            </button>
+                                        </div>
+                                        <div class="dropdown-item" id="confirmationDiv" style="display: none;">
+                                            已成功儲存您的載具！
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search" id="searchForm">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                                id="searchInput">
+                            <button class="btn btn-outline-success" type="submit" id="searchButton">Search</button>
+                            <a href="./Register.html" class="btn btn-outline-primary" id="registerButton">註冊會員</a>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div style="position: relative; top: 100px;" id="p1">
+            <ul class="breadcrumb p-3">
+                <li class="breadcrumb-item active"><a href="./main.html">HOME</a></li>
+                <li class="breadcrumb-item" style="font-weight: bold;">Introduction</li>
+            </ul>
+            <div class="second123 container p-5 my-5 text-center bg-danger bg-opacity-25 rounded">
+                <h1 class="">Introduction</h1>
+                <!-- 中文介紹 -->
+                <p class="p-5" style="text-align: justify;font-size: 28px;color: black;">
+                    在「FULL
+                    LOVE愛寵」，您可以獲得各種寵物的詳細介紹，包括狗、貓、鳥類、兔子、小型哺乳動物等。我們提供有關各種品種的特點、飼養需求、健康護理和培訓建議等相關信息，幫助您了解不同寵物的需求和照顧方法。
+
+                    此外，我們還提供關於寵物醫療保健的指南，包括預防接種、常見疾病和醫療常識等。您可以查詢寵物診所和獸醫師的資訊，並獲取專業的寵物健康建議。
+
+                    如果您正在尋找一位新的毛茸茸家庭成員，我們的「領養寵物」區域將為您提供領養須知、認養流程和可供認養的寵物資訊。我們鼓勵領養而非購買，以支持動物福利和無家可歸的寵物。
+
+                    除了資訊內容，我們還提供一個線上社群平台，供寵物愛好者交流和分享寵物經驗。您可以加入我們的討論區、參與寵物相片比賽、閱讀其他飼主的故事，並與同樣熱愛寵物的人建立聯繫。
+
+                    無論您是正在尋找寵物相關資訊，還是想與其他寵物愛好者互動，「FULL LOVE愛寵」都是您的最佳選擇。我們致力於為您提供一個全面且有趣的寵物體驗，讓您的寵物生活更加美好。
+                </p>
+                <hr>
+                <!-- 英文 -->
+                <div id="toggleContent" style="display: block;">
+                    <p id="englishContent" class="p-5" style="text-align: justify; font-size: 28px;display: none;">
+                        Welcome to "FULL LOVE" ,a website dedicated to providing comprehensive pet-related information
+                        and services. Whether you are a pet enthusiast, a pet expert, or a novice pet owner, we are
+                        committed to offering you top-quality content and abundant resources.
+
+                        At "Pet Paradise," you can find detailed introductions to various pets, including dogs, cats,
+                        birds,
+                        rabbits, and small mammals. We provide information on different breeds, their characteristics,
+                        care
+                        requirements, and tips for maintaining their health and training.
+
+                        Furthermore, we offer a guide to pet healthcare, covering topics such as vaccinations, common
+                        illnesses, and medical knowledge. You can access information about pet clinics and
+                        veterinarians, as
+                        well as receive professional advice on pet health.
+
+                        If you are looking to add a new furry family member, our "Adopt a Pet" section provides adoption
+                        guidelines, the adoption process, and information on available pets. We encourage adoption over
+                        purchasing to support animal welfare and provide homes for homeless pets.
+
+                        In addition to informational content, we provide an online community platform for pet
+                        enthusiasts to
+                        connect and share their pet experiences. You can join our discussion forums, participate in pet
+                        photo contests, read stories from other pet owners, and build connections with fellow pet
+                        lovers.
+
+                        Whether you are seeking pet-related information or looking to interact with other pet
+                        enthusiasts,
+                        "FULL LOVE" is your ultimate destination. We are committed to providing you with a comprehensive
+                        and enjoyable pet experience, making your pet's life even more wonderful.
+                        <br>
+                        <br>
+                        <br>
+                    </p>
+                </div>
+                <p onclick="toggleEnglishContent()" class="englishtext" style="text-align: right;">more</p>
+            </div>
+            <div class="second123 container mt-4 my-5 p-5 rounded bg-danger bg-opacity-25">
+                <div class="row">
+                    <div class="col-sm-5 col-md-4">
+                        <h3>各種品種介紹</h3>
+                        <ul>
+                            <li>
+                                兔子
+                                <span class="intro hidden">
+                                    -英國傳統兔（英國肥兔，英文名稱：English
+                                    Lop），是一種大型的兔子品種，最引人注目的特點是其長長的垂耳朵。垂耳朵能長達20多厘米，垂在兔子的頭兩側，給予它們獨特的外觀。
+                                </span>
+                            </li>
+                            <li>
+                                烏龜
+                                <span class="intro hidden">
+                                    -紅耳龜（英文名稱：Red-eared
+                                    Slider）是一種中型到大型的烏龜，其最明顯的特點是其頭部側面有明顯的紅色斑點，起源於美國中南部地區，現在已成為全球飼養最常見的烏龜之一。
+                                </span>
+                            </li>
+                            <li>
+                                蛇
+                                <span class="intro hidden">
+                                    -沙蚺（Sand
+                                    Boa）是一種中小型的蛇類，主要分布在沙漠地區。它們的身體圓胖且短小，外觀呈現出沙漠砂粒的顏色和紋路，有助於它們的保護色。沙蚺通常以鼠類和其他小型爬蟲類為食物，屬於無毒蛇類，適合作為寵物飼養。沙蚺的性情溫和，對於初次飼養蛇類的人來說是一個不錯的選擇。
+                                </span>
+                            </li>
+                            <li>
+                                貓
+                                <span class="intro hidden">
+                                    -英國短毛貓（British Shorthair）是一種知名的貓品種，擁有優雅的外貌和溫和的性格。
+                                </span>
+                            </li>
+                            <li>
+                                狗
+                                <span class="intro hidden">
+                                    -法國鬥牛犬（French Bulldog）是一種小型犬，外觀獨特且充滿個性。它們有寬大的頭部和短而結實的身體，耳朵直立且寬大。法國鬥牛犬性格友善
+                                </span>
+                            </li>
+                            <li>
+                                鸚鵡
+                                <span class="intro hidden">
+                                    -紅額愛情鳥（Red-crowned Amazon）是中等大小的鳥類，主要分佈於南美洲的熱帶雨林地區。
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-4">
+                        <h3>我們的服務</h3>
+                        <ul>
+                            <li>寵物收養服務</li>
+                            <li>寵物醫療保健</li>
+                            <li>寵物美容和洗澡</li>
+                            <li>培訓和行為訓練</li>
+                            <li>寵物用品和食品銷售</li>
+                        </ul>
+
+                    </div>
+                    <div class="col-sm-3 col-md-4">
+                        <h3>分享寵物平台</h3>
+                        <ul>
+                            <li>
+                                曬毛小孩的外表特徵
+                                <span class="intro hidden">
+                                    <br>
+                                    小花，是隻2歲的貓
+                                    特徵: 可愛的英國短毛貓。
+                                    <hr>
+                                    旺財，是隻3歲的狗
+                                    特徵: 雖然很小隻但超級忠心的法鬥。
+                                </span>
+                            </li>
+                            <li>
+                                可愛日常互動
+                                <span class="intro hidden">
+                                    <br>
+                                    小花，很黏人常常在我工作時，擋住電腦畫面。
+                                    <hr>
+                                    旺財，平常很高冷，不怎麼撒嬌，但每次聽到散步都會興奮的轉圈圈
+                                </span>
+                            </li>
+                            <li>
+                                <a href="../正式/picture.html" style="color: black;">照片牆</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="container mt-3">
+                <div class="mt-4 p-5 bg-primary text-white rounded">
+                    <h1>Jumbotron Example</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip
+                        ex ea commodo consequat..
+                    </p>
+                </div>
+            </div> -->
+            <ul class="pagination justify-content-center" style="margin:30px 0 50px 0">
+                <li class="page-item"><a class="page-link" href="#p1">Top</a></li>
+                <li class="page-item"><a class="page-link" href="./main.html">1</a></li>
+                <li class="page-item active"><a class="page-link" href="./introduction.html">2</a></li>
+                <li class="page-item"><a class="page-link" href="./service.html">3</a></li>
+                <li class="page-item"><a class="page-link" href="./share_plateform.html">4</a></li>
+                <li class="page-item"><a class="page-link" href="./nomal_set.html">The Last</a></li>
+            </ul>
+            <div class="footer container-fluid p-5"
+                style="background: linear-gradient(to right, rgba(240, 128, 128, 0.486), rgba(173, 216, 230, 0.479));"
+                id="p1">
+                <h1>FULL LOVE愛寵</h1>
+                <p>愛寵是一個致力於提供優質寵物服務的網站。我們熱愛動物，並致力於保護和照顧它們的福祉，
+                    無論您是寵物愛好者、養寵物的人，還是正在尋找寵物收養的人，我們都為您提供了各種有用的資源和服務，
+                    如果您有任何問題或需要進一步了解我們的服務，請填寫會員專區的表單，給我們建議
+                    ，或者聯絡我們 (<a href="tel:+886-123-456-789" id="tel"
+                        aria-label="0123-456-789">0123-456-789</a>)，我們將盡快與您聯繫。
+                </p>
+                <h6>@ 2023 &nbsp;小專題製作 &nbsp;網頁設計&nbsp;|&nbsp;作者：王玥晴 &nbsp;|&nbsp;
+                    導師：王偉璁&nbsp;
+                </h6>
+            </div>
+        </div>
+
+    </div>
+    <script src="../JS/intro.js"></script>
+
+</body>
+
+</html>

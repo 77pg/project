@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>註冊頁面</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#submitFormButton").click(function () {
+                // 獲取使用者輸入的 Email 和密碼
+                var email = $("#inputEmail").val();
+                var password = $("#inputPassword").val();
+
+                // 驗證輸入是否為空
+                if (email === "" || password === "") {
+                    alert("請輸入完整的 Email 和密碼！");
+                    return;
+                }
+
+                // 使用AJAX發送表單數據到後端處理
+                $.ajax({
+                    url: "process_registration.php",
+                    method: "POST",
+                    data: {
+                        email: email,
+                        password: password
+                    },
+                    success: function (response) {
+                        if (response.status === "success") {
+                            alert(response.message);
+                            window.location.href = "reg.html";
+                        } else {
+                            alert(response.message);
+                        }
+                    },
+                    error: function () {
+                        alert("發生錯誤，無法完成註冊。請稍後再試。");
+                    }
+                });
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <h1>註冊頁面</h1>
+    <form>
+        <label>Email:</label>
+        <input type="email" id="inputEmail" required>
+        <br>
+        <label>密碼:</label>
+        <input type="password" id="inputPassword" required>
+        <br>
+        <button type="button" id="submitFormButton">提交</button>
+    </form>
+</body>
+
+</html>

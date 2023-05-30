@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pinball Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser/dist/phaser.min.js"></script>
+</head>
+
+<body>
+    <script>
+        var config = {
+            type: Phaser.AUTO,
+            width: 400,
+            height: 300,
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    gravity: { y: 300 },
+                    debug: false
+                }
+            },
+            scene: {
+                preload: preload,
+                create: create,
+                update: update
+            }
+        };
+
+        var game = new Phaser.Game(config);
+
+        var score = 0;
+        var scoreText;
+        var ball;
+
+        function preload() {
+            this.load.image('ball', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpTrCG1t-JgbGjnHXXNcF-KAH1_5gZyBuztA&usqp=CAU');
+        }
+
+        function create() {
+            ball = this.physics.add.image(200, 250, 'ball');
+            ball.setScale(0.5); // 調整圖片尺寸
+            ball.setCollideWorldBounds(true);
+            ball.setBounce(1);
+            ball.setVelocity(200, -200);
+            this.physics.world.enable([ball], Phaser.Physics.Arcade);
+            // 設定圓形碰撞框
+            ball.body.setCircle(25);
+
+            scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '16px', fill: '#000' });
+
+            this.input.on('pointerdown', launchBall, this);
+
+            this.physics.world.on('worldbounds', function () {
+                score -= 10;
+                updateScoreText();
+            });
+        }
+
+        function update() {
+            if (ball.y > 275) {
+                ball.setVelocity(0);
+                ball.setPosition(200, 250);
+                score -= 50;
+                updateScoreText();
+            }
+        }
+
+        function launchBall() {
+            if (ball.body.velocity.y === 0) {
+                ball.setVelocityY(-300);
+            }
+        }
+
+        function updateScoreText() {
+            scoreText.setText('Score: ' + score);
+        }
+    </script>
+</body>
+
+</html>

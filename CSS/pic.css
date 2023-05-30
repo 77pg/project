@@ -1,0 +1,55 @@
+h1{
+    text-align: center;
+}
+/* 寵物分享最外層 */
+.card-custom{
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+.card{
+    padding: 10px;
+}
+/* 圖片內容高度 */
+.card-img-custom {
+    height: 400px;
+    object-fit: cover;
+}
+.card-title{
+    font-size: 30px;
+}
+.card-text{
+    font-size: 20px;
+}
+/* 文字內容高度 */
+.card-body {
+    margin-top:5px ;
+    border-top: 2px solid rgba(2, 157, 247, 0.671);
+    /* 設定固定高度 */
+    height: 150px;
+    /* 僅顯示垂直滾動條 */
+    overflow-y: auto;
+}
+
+/* 頁面隱藏滾動條上下箭頭和軌道背景 */
+::-webkit-scrollbar {
+    /* 設置滾動條寬度 */
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    /* 圖片滾動條滑塊顏色 */
+    background-color: #b3cfda;
+    /* 滾動條滑塊圓角 */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    /* 圖片滾動條滑塊在懸停時的顏色 */
+    background-color: #f0cbcb;
+}
+
+::-webkit-scrollbar-track {
+    /* 設置軌道背景為透明 */
+    background-color: transparent;
+}

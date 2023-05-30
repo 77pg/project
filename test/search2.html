@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 寵物列表
+            var petList = [
+                {
+                    name: "強森",
+                    type: "貓",
+                    age: "6 歲",
+                    description: "這是一隻可愛的貓咪。"
+                },
+                {
+                    name: "阿財",
+                    type: "狗",
+                    age: "13 歲",
+                    description: "這是一隻忠心的狗狗。"
+                },
+                {
+                    name: "小美",
+                    type: "兔子",
+                    age: "10 歲",
+                    description: "這是一隻活潑可愛的兔子。"
+                },
+                // 可以繼續添加更多的寵物
+                {
+                    name: "小飛機",
+                    type: "鳥",
+                    age: "8 歲",
+                    description: "這是一隻美麗的鳥兒。"
+                },
+                {
+                    name: "妙蛙種子",
+                    type: "青蛙",
+                    age: "2歲",
+                    description: "這是一隻神秘的青蛙。"
+                }
+            ];
+
+            // 生成寵物列表HTML
+            function generatePetList() {
+                var petListContainer = $("#petList");
+                petListContainer.empty();
+                for (var i = 0; i < petList.length; i++) {
+                    var pet = petList[i];
+                    var petItem = $("<li></li>");
+                    petItem.append("<h3>" + pet.name + "</h3>");
+                    petItem.append("<p>種類: " + pet.type + "</p>");
+                    petItem.append("<p>年齡: " + pet.age + "</p>");
+                    petItem.append("<p>描述: " + pet.description + "</p>");
+                    petListContainer.append(petItem);
+                }
+            }
+
+            // 初始化寵物列表
+            generatePetList();
+
+            // 搜尋功能
+            $("#searchButton").click(function () {
+                var searchInput = $("#searchInput").val();
+                if (searchInput.trim() !== "") {
+                    // 將搜尋關鍵字顯示在搜尋紀錄中
+                    $("#searchHistory").prepend("<p>" + searchInput + "</p>");
+
+                    // 搜尋寵物
+                    var searchResult = petList.filter(function (pet) {
+                        return (
+                            pet.name.toLowerCase().includes(searchInput.toLowerCase()) ||
+                            pet.type.toLowerCase().includes(searchInput.toLowerCase())
+                        );
+                    });
+
+                    // 顯示搜尋結果
+                    if (searchResult.length > 0) {
+                        var searchResultText = "搜尋結果：\n\n";
+                        for (var i = 0; i < searchResult.length; i++) {
+                            var pet = searchResult[i];
+                            searchResultText += "名稱: " + pet.name + "\n";
+                            searchResultText += "種類: " + pet.type + "\n";
+                            searchResultText += "年齡: " + pet.age + "\n";
+                            searchResultText += "描述: " + pet.description + "\n";
+                            searchResultText += "\n";
+                        }
+                        alert(searchResultText);
+                    } else {
+                        alert("搜尋不到結果");
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div style="position: relative; top: 70px; padding-bottom: 100px;">
+        <div class="container">
+            <h1 class="text-center">寵物列表</h1>
+            <ul id="petList"></ul>
+        </div>
+        <div class="container">
+            <h1 class="text-center">寵物表單</h1>
+            <div id="petForm">
+            </div>
+        </div>
+
+        <div class="form-group p-3 mt-5">
+            <label for="searchInput">搜尋寵物名稱或種類</label>
+            <div class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                    id="searchInput">
+                <button class="btn btn-primary" type="button" id="searchButton">搜尋</button>
+            </div>
+            <div id="searchHistory"></div>
+        </div>
+    </div>
+</body>
+
+</html>

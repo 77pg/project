@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寵物網站</title>
+    <style>
+        /* CSS 樣式 */
+        /* 假設您已經有自己的 CSS 樣式，這裡只提供基本的樣式示例 */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .search-input {
+            width: 300px;
+            padding: 10px;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            background-color: #f1f1f1;
+            border: none;
+            cursor: pointer;
+        }
+
+        .pet-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .pet-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>寵物網站</h1>
+
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="請輸入寵物關鍵字" id="searchInput">
+            <button class="search-button" onclick="searchPets()">搜尋</button>
+        </div>
+
+        <ul class="pet-list" id="petList">
+            <li class="pet-item">貓咪</li>
+            <li class="pet-item">貓咪2</li>
+            <li class="pet-item">英國短毛貓</li>
+            <li class="pet-item">狗狗</li>
+            <li class="pet-item">兔子</li>
+            <li class="pet-item">鸚鵡</li>
+            <li class="pet-item">金魚</li>
+        </ul>
+    </div>
+
+    <script>
+        function searchPets() {
+            var searchInput = document.getElementById('searchInput').value.toUpperCase();
+            var petList = document.getElementById('petList');
+            var pets = petList.getElementsByTagName('li');
+
+            for (var i = 0; i < pets.length; i++) {
+                var pet = pets[i];
+                var petName = pet.innerText.toUpperCase();
+
+                if (petName.includes(searchInput)) {
+                    pet.style.display = 'block';
+                } else {
+                    pet.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

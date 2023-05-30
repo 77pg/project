@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://img.onl/WnRMG" rel="icon" type="jpg">
+    <title>FL愛寵-會員專區</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <script src="../JS/navbar.js"></script>
+    <style>
+        button {
+            font-size: 25px;
+            width: 100px;
+        }
+
+        a:hover {
+            color: rgb(21, 141, 253);
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="content-container">
+        <nav class="navbar fixed-top shadow">
+            <div class="container-fluid">
+                <div class="navbar-brand">
+                    <a href="./main.html" style="display: flex; align-items: center;text-decoration: none;">
+                        <img src="https://img.onl/C7JQSq">
+                        <span style="color: white; font-weight: bold;">FULL LOVE愛寵</span>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end"
+                    style="background: linear-gradient(to top, rgb(231, 223, 223), rgb(207, 242, 253));" tabindex="-1"
+                    id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" style="font-weight: bold;" id="offcanvasNavbarLabel">FL愛寵</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="./main.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-black" href="./introduction.html">關於我們</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-black" href="./service.html">寵物服務內容</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    寵物分享平台
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./share_plateform.html">日常互動分享</a></li>
+                                    <li><a class="dropdown-item" href="./picture.html">照片牆</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    會員專區
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./nomal_set.html">基本資料</a></li>
+                                    <li>
+                                        <a class="dropdown-item" href="#integrationField">載具整合</a>
+                                        <div class="d-flex mt-2" style="display: none;">
+                                            <input class="form-control p-2 m-2" type="text" id="integrationField"
+                                                placeholder="載具格式：/xxx+xxx"
+                                                style="text-transform: uppercase;display: none;">
+                                            <button class="btn btn-primary m-2" id="saveButton"
+                                                style="display: none;width: 23%;font-size: small;">儲存
+                                            </button>
+                                        </div>
+                                        <div class="dropdown-item" id="confirmationDiv" style="display: none;">
+                                            已成功儲存您的載具！
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3" role="search" id="searchForm">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                                id="searchInput">
+                            <button class="btn btn-outline-success" type="submit" id="searchButton">Search</button>
+                            <a href="./Register.html" class="btn btn-outline-primary" id="registerButton">註冊會員</a>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <br>
+        <!-- <div class="header container-fluid p-5 text-white text-center" id="p1">
+            <h1>FL愛寵會員專區</h1>
+        </div> -->
+        <div style="position: relative; top: 70px;" id="p1">
+            <ul class="breadcrumb p-3">
+                <li class="breadcrumb-item active"><a href="./main.html">HOME</a></li>
+                <li class="breadcrumb-item"><a href="./introduction.html">Introduction</a></li>
+                <li class="breadcrumb-item"><a href="./service.html">Services</a></li>
+                <li class="breadcrumb-item"><a href="./share_plateform.html">Plateform</a></li>
+                <li class="breadcrumb-item" style="font-weight: bold;">Member</li>
+            </ul>
+        </div>
+        <div class="shadow p-5 m-5 mt-3 bg-body rounded" style="position: relative; top: 95px;padding-bottom: 100px;">
+            <div class="form-group row mb-3">
+
+                <div class="col-sm-3 text-center">
+                    <a class="nav-link disabled shadow" style="font-size: 30px; opacity: 0.5;">
+                        <p class="text-black" id="userName">Hello！Miss Wang</p>
+                    </a>
+                </div>
+                <div class="col-sm-9"></div>
+            </div>
+
+
+            <form class="m-5">
+                <div class="form-group row mb-3">
+                    <label for="usertel" class="col-sm-4 col-form-label">Phone</label>
+                    <div class="col-sm-8">
+                        <input id="usertel" name="usertel" class="form-control" type="tel" placeholder="0912345678">
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label for="userBirth" class="col-sm-4 col-form-label">Birth</label>
+                    <div class="col-sm-8">
+                        <input id="userbirth" name="userBirth" class="form-control" type="date">
+                    </div>
+                </div>
+                <!-- 信箱 -->
+                <div class="form-group row mb-3">
+                    <label for="useremail" class="col-sm-4 col-form-label">Email</label>
+                    <div class="col-sm-8">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">
+                                    <i class="fa fa-calendar-check-o"></i>
+                                </div>
+                            </div>
+                            <input id="useremail" name="useremail" type="email" class="form-control"
+                                value="example@gmail.com">
+                        </div>
+                    </div>
+                </div>
+                <!-- 地址 -->
+                <div class="form-group row mb-3">
+                    <label for="text1" class="col-4 col-form-label">Address</label>
+                    <div class="col-8">
+                        <select id="select" name="select" class="custom-select">
+                            <option>基隆市</option>
+                            <option>臺北市</option>
+                            <option>新北市</option>
+                            <option>桃園縣</option>
+                            <option>新竹市</option>
+                            <option>新竹縣</option>
+                            <option>苗栗縣</option>
+                            <option>臺中市</option>
+                            <option>彰化縣</option>
+                            <option>南投縣</option>
+                            <option>雲林縣</option>
+                            <option>嘉義市</option>
+                            <option>嘉義縣</option>
+                            <option>臺南市</option>
+                            <option>高雄市</option>
+                            <option>屏東縣</option>
+                            <option>臺東縣</option>
+                            <option>花蓮縣</option>
+                            <option>宜蘭縣</option>
+                            <option>澎湖縣</option>
+                            <option>金門縣</option>
+                            <option>連江縣</option>
+                        </select>
+                        <input id="text1" name="text1" type="text" class="form-control" placeholder="XX區XX里XXX街XXX號">
+                    </div>
+                </div>
+                <!-- 改善建議，浮動標籤 form-floating -->
+                <div class="form-group row mt-5 mb-3">
+                    <label class="col-4 col-form-label">Suggestion</label>
+                    <div class="col-8 form-floating">
+                        <!-- 浮動效果文本 -->
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                            style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Comments</label>
+                    </div>
+                </div>
+                <!-- checkbox -->
+                <div class="form-group row">
+                    <label class="col-4"></label>
+                    <div class="col-8">
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input name="checkbox" id="checkbox_0" type="checkbox" checked="checked"
+                                class="custom-control-input" value="read">
+                            <label for="checkbox_0" class="custom-control-label">已閱讀並同意隱私權/告知事項</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input name="checkbox" id="checkbox_1" type="checkbox" checked="checked"
+                                class="custom-control-input" value="accept">
+                            <label for="checkbox_1" class="custom-control-label">接收訂閱內容送至郵件</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- 驗證訊息 -->
+                <div>
+                    <label for="form-group row" class="col-4 col-form-label"></label>
+                    <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" data-bs-whatever="@gmail.com">儲存變更</button>
+                    <!-- <button class="btn btn-primary mt-3"><a class="text-white text-decoration-none"
+                            href="./main.html">取消</a></button> -->
+                    <a class="btn btn-primary mt-3" href="./main.html">取消</a>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">驗證</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-floating">
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="recipient-name"
+                                                placeholder="@gmail.com">
+                                            <label for="recipient-name">Email address</label>
+                                        </div>
+                                        <div class="form-floating">
+                                            <input type="password" class="form-control" id="message-text"
+                                                placeholder="Password">
+                                            <label for="message-text">Password</label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <div id="report"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">關閉驗證</button>
+                                    <button type="button" class="btn btn-primary" id="submit">送出</button>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </form>
+        </div>
+    </div>
+    <script>
+        const exampleModal = document.getElementById('exampleModal')
+        exampleModal.addEventListener('show.bs.modal', event => {
+            const button = event.relatedTarget
+            const recipient = button.getAttribute('data-bs-whatever')
+            const modalTitle = exampleModal.querySelector('.modal-title')
+            const modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+        })
+        const submitButton = document.getElementById('submit');
+        submitButton.addEventListener('click', () => {
+            // 關閉exampleModal原本的提示框
+            exampleModal.setAttribute('aria-hidden', 'true');
+            exampleModal.classList.remove('show');
+            document.body.classList.remove('modal-open');
+
+            // 顯示新的提示框
+            const successModal = createModal('successModal', 'successModalLabel', '成功填寫，已收到回覆！');
+
+            document.body.appendChild(successModal);
+
+            const successModalInstance = new bootstrap.Modal(successModal);
+            successModalInstance.show();
+        });
+
+        function createModal(id, labelId, content) {
+            const modal = document.createElement('div');
+            modal.classList.add('modal', 'fade');
+            modal.setAttribute('id', id);
+            modal.setAttribute('tabindex', '-1');
+            modal.setAttribute('aria-labelledby', labelId);
+            modal.setAttribute('aria-hidden', 'true');
+
+            const modalDialog = document.createElement('div');
+            modalDialog.classList.add('modal-dialog');
+
+            const modalContent = document.createElement('div');
+            modalContent.classList.add('modal-content');
+
+            const modalHeader = document.createElement('div');
+            modalHeader.classList.add('modal-header');
+
+            const modalTitle = document.createElement('h1');
+            modalTitle.classList.add('modal-title');
+            modalTitle.textContent = 'Messsage';
+
+            const closeButton = document.createElement('button');
+            closeButton.setAttribute('type', 'button');
+            closeButton.classList.add('btn-close');
+            closeButton.setAttribute('data-bs-dismiss', 'modal');
+            closeButton.setAttribute('aria-label', 'Close');
+
+            closeButton.addEventListener('click', () => {
+                modal.classList.remove('show');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('modal-open');
+
+                const backdrop = document.querySelector('.modal-backdrop');
+                if (backdrop) {
+                    backdrop.remove();
+                }
+            });
+
+            modalHeader.appendChild(modalTitle);
+            modalHeader.appendChild(closeButton);
+
+            const modalBody = document.createElement('div');
+            modalBody.classList.add('modal-body');
+            modalBody.textContent = content;
+
+            modalContent.appendChild(modalHeader);
+            modalContent.appendChild(modalBody);
+            modalDialog.appendChild(modalContent);
+            modal.appendChild(modalDialog);
+
+            return modal;
+        }
+    </script>
+    <!-- JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+        </script> -->
+    <div class="p-5 m-3">
+        <ul class="pagination justify-content-center" style="margin:30px 0 50px 0">
+            <li class="page-item"><a class="page-link" href="#p1">Top</a></li>
+            <li class="page-item"><a class="page-link" href="./main.html">1</a></li>
+            <li class="page-item"><a class="page-link" href="./introduction.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="./service.html">3</a></li>
+            <li class="page-item"><a class="page-link" href="./share_plateform.html">4</a></li>
+            <li class="page-item active"><a class="page-link" href="./nomal_set.html">The Last</a></li>
+        </ul>
+    </div>
+    <div class="footer container-fluid p-5"
+        style="background: linear-gradient(to right, rgba(240, 128, 128, 0.486), rgba(173, 216, 230, 0.479));" id="p1">
+        <h1>FULL LOVE愛寵</h1>
+        <p>愛寵是一個致力於提供優質寵物服務的網站。我們熱愛動物，並致力於保護和照顧它們的福祉，
+            無論您是寵物愛好者、養寵物的人，還是正在尋找寵物收養的人，我們都為您提供了各種有用的資源和服務，
+            如果您有任何問題或需要進一步了解我們的服務，請填寫會員專區的表單，給我們建議
+            ，或者聯絡我們 (<a href="tel:+886-123-456-789" id="tel" aria-label="0123-456-789">0123-456-789</a>)，我們將盡快與您聯繫。
+        </p>
+        <h6>@ 2023 &nbsp;小專題製作 &nbsp;網頁設計&nbsp;|&nbsp;作者：王玥晴 &nbsp;|&nbsp;
+            導師：王偉璁&nbsp;
+        </h6>
+    </div>
+</body>
+
+</html>
